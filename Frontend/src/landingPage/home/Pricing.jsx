@@ -11,7 +11,7 @@ function Pricing() {
             in India. Flat fees and no hidden charges.
           </p>
           <a href="" style={{ textDecoration: "none" }}>
-            See pricing <i class="fa-solid fa-arrow-right"></i>
+            See pricing <i className="fa-solid fa-arrow-right"></i>
           </a>
         </div>
         <div className="col-2"></div>
@@ -19,13 +19,13 @@ function Pricing() {
           <div className="row ">
             <div className="col-6 border p-3 text-center">
               <h1 className="mb-3">
-                <i class="fa-solid fa-indian-rupee-sign">0</i>
+                <i className="fa-solid fa-indian-rupee-sign">0</i>
               </h1>
               <p>Free equity delivery and direct mutual funds</p>
             </div>
             <div className="col-6 border  p-3 text-center">
               <h1 className="mb-3">
-                <i class="fa-solid fa-indian-rupee-sign">20</i>
+                <i className="fa-solid fa-indian-rupee-sign">20</i>
               </h1>
               <p>Free equity delivery and direct mutual funds</p>
             </div>

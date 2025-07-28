@@ -42,10 +42,10 @@ function Stats() {
           />
           <div>
             <a href="" className="mx-5" style={{textDecoration:"none"}}>
-              Explore our products <i class="fa-solid fa-arrow-right"></i>
+              Explore our products <i className="fa-solid fa-arrow-right"></i>
             </a>
             <a href="" className="mx-5" style={{textDecoration:"none"}}>
-              Try Kite demo <i class="fa-solid fa-arrow-right"></i>
+              Try Kite demo <i className="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>

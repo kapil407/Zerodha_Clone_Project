@@ -1,29 +1,30 @@
 import React from 'react'
 //largestBroker.svg
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    
-    <nav class="navbar navbar-expand-lg  p-3 border-bottom " style={{background:"white"}}>
-  <div class="container">
-   <a href="#"> <img src="media/images/logo.svg" alt="Logo" style={{width:"30%",marginLeft:"25px"}} /></a>
+   
+    <nav className="navbar navbar-expand-lg  p-3 border-bottom " style={{background:"white"}}>
+  <div className="container">
+   <Link to={'/'}> <img src="media/images/logo.svg" alt="Logo" style={{width:"30%",marginLeft:"25px"}} /></Link>
   
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item mx-4">
-          <a className="nav-link change "  href="#">Signup</a>
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul className="navbar-nav">
+        <li className="nav-item mx-4">
+        <Link to={'/signup'} className="nav-link change "  href="#">Signup</Link>
         </li>
-         <li class="nav-item mx-4">
-          <a className="nav-link change "  href="#">About</a>
+      <li className="nav-item mx-4">
+          <Link to={'/about'} className="nav-link change "  href="#">About</Link>
         </li>
-         <li class="nav-item mx-4">
-          <a className="nav-link change "  href="#">Product</a>
+         <li className="nav-item mx-4">
+          <Link to={'/product'} className="nav-link change "  href="#">Product</Link>
         </li>
-         <li class="nav-item mx-4">
-          <a className="nav-link change"  href="#">Pricing</a>
+         <li className="nav-item mx-4">
+          <Link to={'/pricing'} className="nav-link change"  href="#">Pricing</Link>
         </li>
-       <li class="nav-item mx-4">
-          <a className="nav-link change"  href="#">Support</a>
+       <li className="nav-item mx-4">
+          <Link to={'/support'} className="nav-link change"  href="#">Support</Link>
         </li>
        
        
