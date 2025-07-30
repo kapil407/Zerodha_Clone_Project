@@ -286,7 +286,7 @@ code {
   color: rgb(70, 70, 70);
 }
 
-.menu.selected {
+.menuSelected {
   color: rgb(245, 104, 52);
 }
 
@@ -669,12 +669,12 @@ hr {
 
 .list {
   list-style-type: none;
-  padding-bottom: 12%;
+  /* padding-bottom: 5%; */
 }
 
 .list li {
   border-bottom: 0.8px solid rgb(235, 234, 234);
-  padding: 12px 10px 12px 14px;
+  padding: 8px 8px 8px 10px;
   position: relative;
 }
 
