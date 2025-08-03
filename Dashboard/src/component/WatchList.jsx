@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 
-// import axios from "axios";
+import axios from "axios";
 
-// import GeneralContext from "./GeneralContext";
+import GeneralContext from "./GeneralContext.jsx";
 
 import { Tooltip, Grow } from "@mui/material";
 
@@ -19,6 +19,13 @@ import { watchlist } from "../data/data";
 // const labels = watchlist.map((subArray) => subArray["name"]);
 
 const WatchList = () => {
+
+
+
+
+
+
+
   // const data = {
   //   labels,
   //   datasets: [
@@ -100,6 +107,10 @@ const WatchList = () => {
 export default WatchList;
 
 const WatchListItem = ({ stock }) => {
+
+  console.log("stock",stock);
+
+
   const [showWatchlistActions, setShowWatchlistActions] = useState(false);
 
   const handleMouseEnter = (e) => {
@@ -124,17 +135,47 @@ const WatchListItem = ({ stock }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-    {showWatchlistActions && <WatchListActions uid={stock.name} />}
+    {showWatchlistActions && <WatchListActions uid={stock.name}  />}
     </li>
   );
 };
 
-const WatchListActions = ({ uid }) => {
-  // const generalContext = useContext(GeneralContext);
+const WatchListActions = ({ uid}) => {
 
-  // const handleBuyClick = () => {
-  //   generalContext.openBuyWindow(uid);
-  // };
+
+
+
+
+
+// const handleSellClick = async () => {
+//     console.log("id ",orderId)
+//   const confirmSell = window.confirm(`Are you sure you want to sell ${uid}?`);
+//   if (!confirmSell) return;
+
+//   try {
+//     const res = await axios.delete("http://localhost:4004/sellStock", 
+//        { orderId }, // product name
+//     {  withCredentials: true}
+//     );
+
+//     console.log("Sell success:", res.data);
+//     alert(`Stock ${uid} sold successfully!`);
+
+//     // Optional: Update UI if using React state
+//     // setWatchlist(prev => prev.filter(item => item.name !== uid));
+//   } catch (err) {
+//     console.error("Sell error:", err);
+//     alert("Error occurred while selling.");
+//   }
+// };
+
+
+
+  const generalContext = useContext(GeneralContext);
+
+  const handleBuyClick = () => {
+    generalContext.openBuyWindow(uid);
+  };
 
   return (
     <span className="actions">
@@ -143,30 +184,30 @@ const WatchListActions = ({ uid }) => {
           title="Buy (B)"
           placement="top"
           arrow
-          TransitionComponent={Grow}
+          transitioncomponent={Grow}
          
         >
-          <button className="buy">Buy</button>
+          <button onClick={handleBuyClick} className="buy">Buy</button>
         </Tooltip>
         <Tooltip
           title="Sell (S)"
           placement="top"
           arrow
-          TransitionComponent={Grow}
+          transitioncomponent={Grow}
         >
-          <button className="sell">Sell</button>
+          <button className="sell" >Sell</button>
         </Tooltip>
         <Tooltip
           title="Analytics (A)"
           placement="top"
           arrow
-          TransitionComponent={Grow}
+          transitioncomponent={Grow}
         >
           <button className="action">
             <BarChartOutlined className="icon" />
           </button>
         </Tooltip>
-        <Tooltip title="More" placement="top" arrow TransitionComponent={Grow}>
+        <Tooltip title="More" placement="top" arrow transitioncomponent={Grow}>
           <button className="action">
             <MoreHoriz className="icon" />
           </button>
